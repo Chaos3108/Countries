@@ -1,0 +1,26 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure wrapping of items */
+    gap: 10px; /* Optional: Adds space between the cards */
+    justify-content: space-around; /* Distribute space evenly */
+    width: 100%;
+}
+
+.body{
+    display: flex;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+.image-card{
+    width: 150px;
+    margin-top: 10px;
+}
