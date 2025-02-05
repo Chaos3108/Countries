@@ -13,7 +13,7 @@ const Country = () => {
       console.log(response.data);
       setCountriesData(response.data);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
   useEffect(() => {
