@@ -13,7 +13,7 @@ const Country = () => {
       console.log(response.data);
       setCountriesData(response.data);
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching data:", error.message); // Explicit error message
     }
   };
   useEffect(() => {
