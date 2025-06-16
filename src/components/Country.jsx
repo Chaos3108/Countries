@@ -10,7 +10,7 @@ const Country = () => {
  const fetchCountries = async () => {
   try {
     const response = await axios.get(
-      " https://xcountries-backend.azurewebsites.net/all"
+      "https://countries-search-data-prod-812920491762.asia-south1.run.app/countries"
     );
     console.log(response.data);
     setCountriesData(response.data);
@@ -29,7 +29,7 @@ const Country = () => {
     return;
   }
   const filteredCountries = countriesData.filter((country) =>
-    country.name.toLowerCase().includes(searchTerm)
+    country.common.toLowerCase().includes(searchTerm)
   );
   setFilterData(filteredCountries);
 }
@@ -40,7 +40,7 @@ const Country = () => {
       <div className="container">
         {filterData &&
           filterData.map((item) => {
-            return <CountryCard name={item.name} imageUrl={item.flag} />;
+            return <CountryCard name={item.common} imageUrl={item.png} />;
           })}
       </div>
     </div>
